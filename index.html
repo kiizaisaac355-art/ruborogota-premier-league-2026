@@ -127,24 +127,6 @@ function fullTime(){ if(!requireAdmin()) return; if(!liveFixtureId){alert('No li
 function renderAll(){ checkAdmin(); renderHome(); renderTable(); renderFixtures(); renderPlayers(); renderTeams(); renderTransfers(); renderLive(); }
 renderAll();
   // --- REAL STATS - OPTA STYLE ---
-function addStat(){
-  const f = d.fixtures.find(function(x){return x.status==='LIVE'});
-  if(!f) return alert("Open a LIVE match first");
-  fixF(f);
-  const team = document.getElementById('statTeam').value; // H or A
-  const type = document.getElementById('statType').value;
-  const suffix = team === 'H' ? 'H' : 'A';
-  const other = team === 'H' ? 'A' : 'H';
-  if(type === 'poss'){
-    f.stats['poss'+suffix] = Math.min(95, (f.stats['poss'+suffix]||50)+1);
-    f.stats['poss'+other] = 100 - f.stats['poss'+suffix];
-  } else {
-   f.stats[type+suffix] = (f.stats[type+suffix]||0) + 1;
-   if(type === 'shotsOn') f.stats['shots'+suffix] = (f.stats['shots'+suffix]||0) + 1;
-  }
-  save();
-  alert("Added! Fans see it in 2 sec");
-}
 function resetStats(){
   const f = d.fixtures.find(function(x){return x.status==='LIVE'});
   if(!f) return;
