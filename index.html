@@ -33,12 +33,12 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:8px;borde
 <button class="navBtn active" onclick="goPage('home',this)">HOME</button><button class="navBtn" onclick="goPage('table',this)">TABLE</button><button class="navBtn" onclick="goPage('fixtures',this)">FIXTURES</button><button class="navBtn" onclick="goPage('players',this)">TOP SCORERS</button><button class="navBtn" onclick="goPage('teams',this)">TEAMS</button><button class="navBtn" onclick="goPage('transfers',this)">TRANSFERS</button><button class="navBtn" onclick="goPage('live',this)">LIVE</button>
 </div>
 
-<div id="tab-home" class="card"><h2>HOME</h2><div id="homeNews"></div><div id="trophyZone" style="background:#fef3c7;padding:12px;border-radius:12px;margin-top:10px"></div><button class="green" onclick="window.print()">PRINT TABLE</button> <button class="gold" id="adminBtn" onclick="toggleAdmin()">ADMIN LOGIN</button> <span id="adminHome"></span></div>
+<div id="tab-home" class="card"><h2>HOME</h2><div id="homeNews"></div><div id="trophyZone" style="background:#fef3c7;padding:12px;border-radius:12px;margin-top:10px"></div><button class="green" onclick="window.print()">PRINT TABLE</button> <button class="gold" id="adminBtn" onclick="toggleAdmin()">ADMIN LOGIN</button> <span id="adminHome"></span>
 <div id="resetAllBox" style="display:none;margin-top:12px;background:#fee2e2;padding:12px;border-radius:12px;border:2px solid #dc2626">
 <b style="color:#991b1b">⚠️ DANGER ZONE - Admin only</b>
 <p style="font-size:13px;color:#666;margin:6px 0">Deletes ALL fixtures, results, players, transfers, commentary & coaches. Teams list is kept. This cannot be undone.</p>
 <button class="red" style="width:100%" onclick="resetEverything()">🗑️ RESET EVERYTHING</button>
-</div>
+</div></div>
 <div id="tab-table" class="card" style="display:none"><h1 style="color:#0808ec;margin:0">Premier League</h1><h2 style="color:#ed0895">Ruborogota</h2><div id="leagueTable"></div></div>
 <div id="tab-fixtures" class="card" style="display:none"><h2 style="text-align:center;color:#37003c">📅 Fixtures & Results</h2><div id="fixtureAdmin"></div><div style="margin-top:10px"><label>Filter Matchweek</label><select id="filterWeek" onchange="renderFixtures()"><option value="all">All Matchweeks</option></select></div><p id="fixCount" style="font-size:13px;color:#666"></p><div id="fixtureList"></div></div>
 <div id="tab-players" class="card" style="display:none"><h2>TOP SCORERS</h2><div id="posAward" style="background:#37003c;color:#fff;padding:12px;border-radius:12px"></div><div id="playerAdmin"></div><div id="playerList"></div></div>
